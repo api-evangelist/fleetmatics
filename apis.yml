@@ -1,8 +1,31 @@
 aid: fleetmatics
 name: Fleetmatics
-description: 'Fleetmatics is a company surfaced as a portfolio company of ivp and added to the API Evangelist
-  network as a stub for enrichment. Sector: logistics. This profile is a lead awaiting the enrichment
-  pipeline.'
+kind: company
+description: 'Fleetmatics was a fleet management, telematics, and GPS vehicle tracking
+  SaaS company whose Reveal platform tracked commercial vehicles, drivers, and mobile
+  assets for small and mid-sized fleets. Founded in Dublin and later headquartered
+  in Massachusetts, Fleetmatics IPO''d on the NYSE in 2012 and was acquired by Verizon
+  in 2016 for about USD 2.4 billion, becoming the core of Verizon Connect. Its Reveal
+  platform exposes a documented REST API and webhook suite - the Fleetmatics Integration
+  Manager (FIM) / Reveal Integration Services APIs - covering vehicles, drivers, GPS
+  positions and history, trips and segments, driver status and safety, hours-of-service
+  logbooks, geofences (places), groups, and non-powered asset tracking. The API gateway
+  still runs on Fleetmatics-branded hosts (fim.api.us.fleetmatics.com); access is gated
+  to Reveal customers and approved integration partners who request Integration Manager
+  and Reveal REST credentials before calling the documented endpoints. The Fleetmatics
+  brand now redirects to Verizon Connect.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fleetmatics.png
 url: https://raw.githubusercontent.com/api-evangelist/fleetmatics/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +33,67 @@ x-backed-by:
 - ivp
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-successor: verizon-connect
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
-- Company
+- Fleet Management
+- Telematics
+- GPS Tracking
+- Vehicle Tracking
+- Fleet Tracking
 - Logistics
-apis: []
+- Verizon
+- Fleetmatics
+common:
+- type: DomainSecurity
+  url: security/fleetmatics-domain-security.yml
+- url: https://www.verizonconnect.com/solutions/gps-fleet-tracking-software/#fleetmatics
+  type: Website
+- url: https://reveal-help.verizonconnect.com/hc/en-us/articles/10933751995539-Developer-portal-overview
+  type: DeveloperPortal
+- url: https://reveal-help.verizonconnect.com/hc/en-us/sections/5491620930451-API-integrations
+  type: Documentation
+- url: https://fim.us.fleetmatics.com/apis
+  type: APIReference
+- url: https://support.verizonconnect.com/
+  type: Support
+- url: llms/fleetmatics-llms.txt
+  type: LLMsTxt
+apis:
+- aid: fleetmatics:fleetmatics-reveal-api
+  name: Fleetmatics Reveal API
+  tags:
+  - Fleet Management
+  - Telematics
+  - GPS Tracking
+  - Vehicles
+  - Drivers
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://reveal-help.verizonconnect.com/hc/en-us/articles/10933751995539-Developer-portal-overview
+  baseURL: https://fim.api.us.fleetmatics.com
+  properties:
+  - url: https://reveal-help.verizonconnect.com/hc/en-us/sections/5491620930451-API-integrations
+    type: Documentation
+  - url: https://fim.us.fleetmatics.com/apis
+    type: APIReference
+  description: The Fleetmatics Reveal API - delivered through the Fleetmatics Integration
+    Manager (FIM) / Reveal Integration Services - exposes REST endpoints for vehicles,
+    drivers, real-time and historical GPS positions, trips and segments, driver
+    status and safety, hours-of-service logbooks, geofences (places), groups, and
+    non-powered asset tracking. Authentication exchanges Base64-encoded Reveal REST
+    credentials for a short-lived bearer token; calls send an Atmosphere authorization
+    header combining the app id and token. Access is gated to Reveal customers and
+    approved integration partners. Now operated under Verizon Connect; see the
+    verizon-connect repo for the fuller modeled API suite.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
