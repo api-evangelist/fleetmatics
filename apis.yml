@@ -14,6 +14,17 @@ description: 'Fleetmatics was a fleet management, telematics, and GPS vehicle tr
   to Reveal customers and approved integration partners who request Integration Manager
   and Reveal REST credentials before calling the documented endpoints. The Fleetmatics
   brand now redirects to Verizon Connect.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
