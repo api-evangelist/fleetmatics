@@ -58,6 +58,11 @@ tags:
 - Verizon
 - Fleetmatics
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/verizon/
+  name: Verizon
+  x-relationship: acquired
+  x-evidence: "Founded in Dublin and later headquartered in Massachusetts, Fleetmatics IPO'd on the NYSE in 2012 and was acquired by Verizon in 2016 for about USD 2."
 - type: DomainSecurity
   url: security/fleetmatics-domain-security.yml
 - url: https://www.verizonconnect.com/solutions/gps-fleet-tracking-software/#fleetmatics
