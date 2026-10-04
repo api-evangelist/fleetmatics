@@ -115,3 +115,8 @@ x-enrichment:
   note: backfilled from .gitignore signal + verified work evidence
 x-parent: verizon-connect
 x-relationship: acquisition
+x-status: acquired
+x-acquired-by: verizon
+x-acquired-date: '2016-11'
+x-status-source: "https://fleetmatics.com/"
+x-status-evidence: "fleetmatics.com redirects to verizonconnect.com/solutions/gps-fleet-tracking-software/#fleetmatics (probed 2026-10-03); Verizon acquired Fleetmatics in 2016 and it became Verizon Connect (roadmap#814)"
